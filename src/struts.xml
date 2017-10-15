@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" 
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <include file="struts-default.xml"/>
+    <package name="sy2"   extends="struts-default">
+    <action name="welcome" class="sy2.func"
+        method = "begin">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="index" class="sy2.func"
+        method = "find">
+            <result name="success">/bookinf.jsp</result>
+            <result name="no author">/fail.jsp</result>
+            <result name="wrong input">/fail.jsp</result>
+        </action>
+        <action name="detailinformation" class="sy2.func"
+        method = "details">
+            <result name="success">/details.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="return" class="sy2.func" method = "Ret">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="add" class="sy2.func" method = "Ret">
+            <result name="success">/add.jsp</result>
+        </action>
+        <action name="addbook" class="sy2.func" method = "addbook">
+            <result name="success">/success.jsp</result>
+            <result name="fail">/fail.jsp</result>
+            <result name="can't find auther">/addauthor.jsp</result>
+        </action>
+        <action name="addauthor" class="sy2.func" method = "addauthor">
+            <result name="success">/success.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+        <action name="addau" class="sy2.func">
+            <result>/addauthor.jsp</result>
+        </action>
+         <action name="bookinf" class="sy2.func">
+            <result >/index.jsp</result>
+        </action>
+        <action name="deletebook" class="sy2.func" method = "db">
+            <result name="success">/success.jsp</result>
+        </action>
+        <action name="update" class="sy2.func">
+            <result>/update.jsp</result>
+        </action>
+        <action name="upd" class="sy2.func" method = "update">
+            <result name="success">/success.jsp</result>
+            <result name="fail">/fail.jsp</result>
+        </action>
+    </package>
+</struts>
