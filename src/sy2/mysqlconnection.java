@@ -18,7 +18,6 @@ public class mysqlconnection {
 	private String url = "jdbc:mysql://127.0.0.1:3306/bookdb";
 	// URL指向要访问的数据库名scutcs
 	private String user = "root";
-	// MySQL配置时的用户名
 	// MySQL配置时的密码
     private String password = "";
     
