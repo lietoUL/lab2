@@ -31,7 +31,7 @@ public class mysqlconnection {
                  conn = DriverManager.getConnection(url, user, password);
                  if(!conn.isClosed())	
                   System.out.println("Succeeded connecting to the Database!");
-                 // ”√¿¥÷¥––SQL”Ôæ‰
+                 // 
                  
                 } catch(ClassNotFoundException e) {
                  System.out.println("Sorry,can`t find the Driver!"); 
